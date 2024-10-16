@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: frontend-repository-procesos-ventas
+    container_name: procesos-ventas-docker-nextjs-1
+    ports:
+      - "3004:3000"
+    env_file:
+      - .env
+    networks:
+      my_new_network:
+        ipv4_address: 10.1.0.10  # Asigna una dirección IP dentro de esta nueva subred
+
+networks:
+  my_new_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/16  # Ajusta la subred aquí
