@@ -13,7 +13,7 @@ services:
       - .env
     networks:
       my_new_network:
-        ipv4_address: 10.2.0.2  # Asigna una dirección IP dentro de esta nueva subred
+        ipv4_address: 10.2.0.10  # Asigna una dirección IP dentro de esta nueva subred
 
 networks:
   my_new_network:
