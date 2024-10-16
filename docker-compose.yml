@@ -5,15 +5,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: frontend-repository-procesos-ventas
-    container_name: procesos-ventas-docker-nextjs-1
+    image: frontend-repository-procesos-ti
+    container_name: procesos-ti-docker-nextjs-1
     ports:
-      - "3004:3000"
+      - "3028:3000"
     env_file:
       - .env
     networks:
       my_new_network:
-        ipv4_address: 10.1.0.10  # Asigna una dirección IP dentro de esta nueva subred
+        ipv4_address: 10.2.0.2  # Asigna una dirección IP dentro de esta nueva subred
 
 networks:
   my_new_network:
